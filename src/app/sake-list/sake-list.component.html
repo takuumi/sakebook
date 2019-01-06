@@ -1,0 +1,39 @@
+<h2>酒見える化</h2>
+検索：
+  <input #keyword size = '20' [value]=getCurrentValue()/>
+  <button (click)="searchSake(keyword.value)">Search</button>
+
+<table>
+  <tr>
+    <th>
+      名前
+    </th>
+    <th>
+      県
+    </th>
+    <th>
+      飲み始め日
+    </th>
+    <th>
+      飲み終わり日
+    </th>
+
+  </tr>
+  <tr *ngFor= "let sake of sakedata">
+    <td>
+        <a routerLink = "/sake-data/{{sake.id}}">{{sake.name}}</a>
+    </td>
+    <td>
+      {{sake.prefecture}}
+    </td>
+    <td>
+        {{sake.drink_start_date}}
+    </td>
+    <td>
+      {{sake.drink_end_date}}
+   </td>
+
+  </tr>
+
+
+</table>

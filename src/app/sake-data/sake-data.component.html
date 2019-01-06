@@ -1,0 +1,27 @@
+** 酒詳細 **
+
+<div *ngIf="sake">
+  <h2>{{sake.name}}</h2>
+<p>{{sake.prefecgure}}</p>
+<table>
+  <tr>
+    <td>
+      <b> 種別：</b> {{sake.type}}
+    </td>
+    <td>
+        <b> アルコール度数：</b> {{sake.alcohol}}
+    </td>
+    <td>
+      <b> 飲み始めた日</b> {{sake.drink_start_date}}
+  </td>      
+    <td>
+        <b> 飲み終わった日</b> {{sake.drink_end_date}}
+    </td>  
+
+  </tr>
+
+</table>
+<img width="200" src="/assets/img/pict{{sake.id}}.jpeg">
+
+</div>
+<button (click)="backToList()">リストに戻る</button>
