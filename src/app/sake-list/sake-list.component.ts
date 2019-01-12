@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {Sake} from '../sake/sake'
 import {SakeService} from '../sake.service'
 
+import { AccordionConfig} from 'ngx-bootstrap';
+
 
 @Component({
   selector: 'app-sake-list',
