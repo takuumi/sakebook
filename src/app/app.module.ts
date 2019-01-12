@@ -11,7 +11,7 @@ import { SakeService} from './sake.service'
   declarations: [
     AppComponent,
     SakeListComponent,
-    SakeDataComponent
+    SakeDataComponent,
   ],
   imports: [
     BrowserModule,
