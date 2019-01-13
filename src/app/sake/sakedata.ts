@@ -65,6 +65,40 @@ export const SAKEDATA: Sake[] = [
         amount:720,
         alcohol:16,
         bikou:""
+    },
+    {
+        id:7,
+        name: "ゆきの美人",
+        type: "純米大吟醸",
+        drink_start_date:"2019/01/12",
+        drink_end_date:"2019/01/13",
+        prefecture:"秋田県",
+        amount:720,
+        alcohol:16,
+        bikou:""
     },   
+    {
+        id:8,
+        name: "ゆきの美人 愛山 6号酵母",
+        type: "純米吟醸",
+        drink_start_date:"2019/01/12",
+        drink_end_date:"2019/01/13",
+        prefecture:"秋田県",
+        amount:720,
+        alcohol:16,
+        bikou:""
+    },   
+    {
+        id:9,
+        name: "鳳凰美田 supreme",
+        type: "純米大吟醸",
+        drink_start_date:"2019/01/12",
+        drink_end_date:"2019/01/13",
+        prefecture:"栃木県",
+        amount:720,
+        alcohol:16,
+        bikou:""
+    },   
+
 ]
 

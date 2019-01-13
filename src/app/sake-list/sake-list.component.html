@@ -1,10 +1,13 @@
-<h2>酒見える化</h2>
+<h2>日本酒見える化</h2>
 検索：
   <input #keyword size = '20' [value]=getCurrentValue()/>
   <button (click)="searchSake(keyword.value)">Search</button>
 
-<table>
+<table class ="table">
   <tr>
+    <th>
+      #
+    </th>    
     <th>
       名前
     </th>
@@ -17,9 +20,11 @@
     <th>
       飲み終わり日
     </th>
-
   </tr>
   <tr *ngFor= "let sake of sakedata">
+    <td>
+          {{sake.id}}
+    </td>    
     <td>
         <a routerLink = "/sake-data/{{sake.id}}">{{sake.name}}</a>
     </td>
@@ -32,12 +37,11 @@
     <td>
       {{sake.drink_end_date}}
    </td>
-
   </tr>
-
-
 </table>
+  
 
+<!-- 
 <accordion>
     <accordion-group heading="Static Header, initially expanded">
       This content is straight in the template.
@@ -52,3 +56,4 @@
       <p>Some content</p>
     </accordion-group>
   </accordion>
+-->
