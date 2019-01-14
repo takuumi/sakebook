@@ -1,5 +1,5 @@
 <div class="jumbotron"
-            style="color:#FFF; background:url(../../assets/img/header.png); background-size:cover;">
+            style="color:#FFF; background:url(/assets/img/header.png); background-size:cover;">
     <h1>日本酒見える化</h1>
     <p>飲んだお酒を記録に残します。記憶より記録。</p>
 </div>
@@ -62,3 +62,25 @@
     </accordion-group>
   </accordion>
 -->
+
+<h1 class="page-header"> Media object</h1>
+<div class="media">
+    <a href="#" class="media-left">
+      <img src="/assets/img/pict1.jpeg" width="50" class="img-rounded">
+    </a>
+    <div class="media-body">
+      <h3 class="media-heading">aaa</h3>
+      hohohohohohohohoohohohoh
+    </div>
+</div>
+
+
+<div class="media" *ngFor= "let sake of sakedata">
+    <a href="#" class="media-left">
+        <img src="/assets/img/pict{{sake.id}}.jpeg" width="50" class="img-rounded">
+    </a>
+    <div class="media-body">
+      <h3 class="media-heading">{{sake.name}}</h3>
+        {{sake.id}}本目。hohohohohohohohoohohohoh
+    </div>
+</div>
