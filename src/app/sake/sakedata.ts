@@ -101,7 +101,7 @@ export const SAKEDATA: Sake[] = [
     },   
     {
         id:10,
-        name: "獺祭　磨き　そのさきへ",
+        name: "獺祭　磨き　その先へ",
         type: "純米大吟醸",
         drink_start_date:"2019/01/14",
         drink_end_date:"---",
