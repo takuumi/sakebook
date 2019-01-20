@@ -99,6 +99,49 @@ export const SAKEDATA: Sake[] = [
         alcohol:16,
         bikou:""
     },   
-
+    {
+        id:10,
+        name: "獺祭　磨き　そのさきへ",
+        type: "純米大吟醸",
+        drink_start_date:"2019/01/14",
+        drink_end_date:"---",
+        prefecture:"山口県",
+        amount:720,
+        alcohol:16,
+        bikou:""
+    },   
+    {
+        id:11,
+        name: "獺祭",
+        type: "純米大吟醸",
+        drink_start_date:"2019/01/14",
+        drink_end_date:"2019/01/20",
+        prefecture:"山口県",
+        amount:720,
+        alcohol:16,
+        bikou:""
+    },   
+    {
+        id:12,
+        name: "廣戸川",
+        type: "純米",
+        drink_start_date:"2019/01/19",
+        drink_end_date:"2019/01/20",
+        prefecture:"福島県",
+        amount:720,
+        alcohol:15,
+        bikou:"酒の山本、家飲み応援クラブ"
+    },   
+    {
+        id:13,
+        name: "松の司",
+        type: "純米吟醸",
+        drink_start_date:"2019/01/19",
+        drink_end_date:"---",
+        prefecture:"滋賀県",
+        amount:720,
+        alcohol:16,
+        bikou:"酒の山本、家飲み応援クラブ"
+    },   
 ]
 
