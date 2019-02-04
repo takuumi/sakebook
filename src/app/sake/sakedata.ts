@@ -142,6 +142,51 @@ export const SAKEDATA: Sake[] = [
         amount:720,
         alcohol:16,
         bikou:"酒の山本、家飲み応援クラブ"
+    },
+    {
+        id:14,
+        name: "NEXT FIVE",
+        type: "生酛大純米吟醸",
+        drink_start_date:"2019/01/26",
+        drink_end_date:"2019/01/27",
+        prefecture:"秋田県",
+        amount:720,
+        alcohol:16,
+        bikou:"へうけもの　ぐい呑付き"
     },   
+    {
+        id:15,
+        name: "春霞　栗ラベル",
+        type: "純米吟醸",
+        drink_start_date:"2019/01/26",
+        drink_end_date:"2019/01/27",
+        prefecture:"秋田県",
+        amount:720,
+        alcohol:16,
+        bikou:""
+    },
+    {
+        id:16,
+        name: "写楽",
+        type: "純米吟醸　無濾過生",
+        drink_start_date:"2019/02/02",
+        drink_end_date:"2019/02/03",
+        prefecture:"福島県",
+        amount:720,
+        alcohol:16,
+        bikou:""
+    },
+    {
+        id:17,
+        name: "鳳凰美田",
+        type: "純米吟醸　無濾過本生　black phenix",
+        drink_start_date:"2019/02/02",
+        drink_end_date:"2019/02/03",
+        prefecture:"栃木県",
+        amount:720,
+        alcohol:16,
+        bikou:""
+    },    
+ 
 ]
 
