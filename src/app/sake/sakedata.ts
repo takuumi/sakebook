@@ -242,6 +242,50 @@ export const SAKEDATA: Sake[] = [
         alcohol:15,
         bikou:""
     },    
- 
+    {
+        id:23,
+        name: "伯楽星",
+        type: "特別純米",
+        drink_start_date:"2019/02/18",
+        drink_end_date:"2019/02/19",
+        prefecture:"宮城県",
+        amount:720,
+        alcohol:16,
+        bikou:""
+    },    
+    {
+        id:24,
+        name: "鳳凰美田　初しぼり",
+        type: "純米吟醸酒",
+        drink_start_date:"2019/02/23",
+        drink_end_date:"2019/02/24",
+        prefecture:"茨城県",
+        amount:720,
+        alcohol:16,
+        bikou:""
+    },  
+    {
+        id:25,
+        name: "而今",
+        type: "純米吟醸酒",
+        drink_start_date:"2019/02/23",
+        drink_end_date:"2019/02/24",
+        prefecture:"三重県",
+        amount:720,
+        alcohol:16,
+        bikou:"酒の山本家飲み応援クラブ２月"
+    },  
+    {
+        id:26,
+        name: "鳳凰美田　初しぼり",
+        type: "純米吟醸酒",
+        drink_start_date:"2019/02/18",
+        drink_end_date:"2019/02/19",
+        prefecture:"茨城県",
+        amount:720,
+        alcohol:16,
+        bikou:"酒の山本家飲み応援クラブ２月"
+    },    
+
 ]
 
