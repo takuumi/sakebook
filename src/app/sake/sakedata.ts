@@ -417,7 +417,128 @@ export const SAKEDATA: Sake[] = [
         amount:720,
         alcohol:16,
         bikou:"29%"
+    },
+    {
+        id:39,
+        name: "出雲富士　山田錦100% 赤ラベル",
+        type: "純米吟醸酒",
+        drink_start_date:"2019/03/30",
+        drink_end_date:"2019/03/31",
+        prefecture:"島根県",
+        amount:720,
+        alcohol:16,
+        bikou:""
     },   
+    {
+        id:40,
+        name: "荷札酒　月白",
+        type: "純米大吟醸酒",
+        drink_start_date:"2019/03/30",
+        drink_end_date:"2019/03/31",
+        prefecture:"新潟県",
+        amount:720,
+        alcohol:15,
+        bikou:""
+    },   
+    {
+        id:41,
+        name: "鳳凰美田　無濾過本生",
+        type: "純米吟醸酒",
+        drink_start_date:"2019/03/30",
+        drink_end_date:"2019/03/31",
+        prefecture:"栃木県",
+        amount:720,
+        alcohol:16,
+        bikou:""
+    },   
+    {
+        id:42,
+        name: "東洋美人　壱番纏",
+        type: "純米大吟醸酒",
+        drink_start_date:"2019/04/05",
+        drink_end_date:"2019/04/07",
+        prefecture:"山口県",
+        amount:720,
+        alcohol:15,
+        bikou:""
+    },   
+    {
+        id:43,
+        name: "獺祭　磨き二割三分",
+        type: "純米大吟醸酒",
+        drink_start_date:"2019/04/05",
+        drink_end_date:"2019/04/07",
+        prefecture:"山口県",
+        amount:720,
+        alcohol:16,
+        bikou:""
+    },   
+    {
+        id:44,
+        name: "田酒　山田錦100%",
+        type: "純米吟醸酒",
+        drink_start_date:"2019/04/05",
+        drink_end_date:"2019/04/07",
+        prefecture:"青森県",
+        amount:720,
+        alcohol:16,
+        bikou:""
+    },   
+    {
+        id:45,
+        name: "松の司　楽",
+        type: "純米吟醸酒",
+        drink_start_date:"2019/04/07",
+        drink_end_date:"2019/04/12",
+        prefecture:"滋賀県",
+        amount:720,
+        alcohol:15,
+        bikou:""
+    },
+    {
+        id:46,
+        name: "鷹長",
+        type: "菩堤もと純米酒",
+        drink_start_date:"2019/04/12",
+        drink_end_date:"2019/04/13",
+        prefecture:"奈良県",
+        amount:720,
+        alcohol:17,
+        bikou:""
+    },
+    {
+        id:47,
+        name: "AKABU 愛山",
+        type: "純米吟醸酒",
+        drink_start_date:"2019/04/12",
+        drink_end_date:"2019/04/13",
+        prefecture:"滋賀県",
+        amount:720,
+        alcohol:15,
+        bikou:""
+    },   
+    {
+        id:48,
+        name: "伯楽星",
+        type: "純米吟醸酒",
+        drink_start_date:"2019/04/12",
+        drink_end_date:"2019/04/13",
+        prefecture:"滋賀県",
+        amount:720,
+        alcohol:16,
+        bikou:""
+    },
+    {
+        id:49,
+        name: "冩楽　備前雄町",
+        type: "純米吟醸酒",
+        drink_start_date:"2019/04/21",
+        drink_end_date:"2019/04/21",
+        prefecture:"福島県",
+        amount:720,
+        alcohol:16,
+        bikou:""
+    },
 
 ]
 
