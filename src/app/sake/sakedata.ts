@@ -539,6 +539,105 @@ export const SAKEDATA: Sake[] = [
         alcohol:16,
         bikou:""
     },
+    {
+        id:50,
+        name: "磯自慢　大吟醸酒純米　酒友",
+        type: "純米大吟醸酒",
+        drink_start_date:"2019/04/26",
+        drink_end_date:"2019/04/30",
+        prefecture:"静岡県",
+        amount:720,
+        alcohol:16,
+        bikou:""
+    },
+    {
+        id:51,
+        name: "ゆきの美人",
+        type: "純米吟醸酒",
+        drink_start_date:"2019/04/26",
+        drink_end_date:"2019/04/30",
+        prefecture:"秋田県",
+        amount:720,
+        alcohol:16,
+        bikou:""
+    },
+    {
+        id:52,
+        name: "秋田春霞",
+        type: "純米吟醸酒",
+        drink_start_date:"2019/04/26",
+        drink_end_date:"2019/04/30",
+        prefecture:"秋田県",
+        amount:720,
+        alcohol:16,
+        bikou:""
+    },
+    {
+        id:53,
+        name: "澤屋まつもと　守破離　山田錦",
+        type: "純米吟醸酒",
+        drink_start_date:"2019/05/01",
+        drink_end_date:"2019/05/03",
+        prefecture:"京都府",
+        amount:720,
+        alcohol:15,
+        bikou:""
+    },
+    {
+        id:54,
+        name: "AKABU 純米吟醸",
+        type: "純米吟醸酒",
+        drink_start_date:"2019/05/01",
+        drink_end_date:"2019/05/03",
+        prefecture:"岩手県",
+        amount:720,
+        alcohol:15,
+        bikou:""
+    },
+    {
+        id:55,
+        name: "楯野川　限定流通品",
+        type: "純米大吟醸酒",
+        drink_start_date:"2019/05/01",
+        drink_end_date:"2019/05/05",
+        prefecture:"山形県",
+        amount:720,
+        alcohol:15,
+        bikou:""
+    },
+    {
+        id:56,
+        name: "羽根屋 純米大吟醸５０　翼",
+        type: "純米大吟醸酒",
+        drink_start_date:"2019/05/01",
+        drink_end_date:"2019/05/03",
+        prefecture:"富山県",
+        amount:720,
+        alcohol:15,
+        bikou:""
+    },
+    {
+        id:57,
+        name: "東一",
+        type: "純米大吟醸酒",
+        drink_start_date:"2019/05/07",
+        drink_end_date:"2019/05/07",
+        prefecture:"佐賀県",
+        amount:720,
+        alcohol:15,
+        bikou:""
+    },
+    {
+        id:58,
+        name: "出雲富士生酒　純米大吟醸酒",
+        type: "純米大吟醸酒",
+        drink_start_date:"2019/05/11",
+        drink_end_date:"2019/05/12",
+        prefecture:"島根県",
+        amount:720,
+        alcohol:16,
+        bikou:""
+    },
 
 ]
 
