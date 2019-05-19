@@ -638,6 +638,27 @@ export const SAKEDATA: Sake[] = [
         alcohol:16,
         bikou:""
     },
-
+    {
+        id:59,
+        name: "ゆきの美人",
+        type: "純米吟醸酒 改良信交",
+        drink_start_date:"2019/05/18",
+        drink_end_date:"2019/05/19",
+        prefecture:"秋田県",
+        amount:720,
+        alcohol:16,
+        bikou:""
+    },
+    {
+        id:60,
+        name: "山川光男",
+        type: "純米大吟醸酒　",
+        drink_start_date:"2019/04/26",
+        drink_end_date:"2019/04/30",
+        prefecture:"秋田県",
+        amount:720,
+        alcohol:16,
+        bikou:"精米歩合３２％。２０１９年プレミアム。"
+    }
 ]
 

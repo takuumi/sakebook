@@ -29,7 +29,7 @@
       飲み終わり日
     </th>
   </tr>
-  <tr *ngFor= "let sake of sakedata">
+  <tr *ngFor= "let sake of sakedata | orderBy:'sake.id'">
     <td>
           {{sake.id}}
     </td>    
