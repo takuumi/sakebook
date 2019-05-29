@@ -5,6 +5,11 @@ import {AccordionModule} from 'ngx-bootstrap';
 // カスタムパイプ
 import { OrderByPipe } from './utilities/order-by-pipe';
 
+import { environment } from '../environments/environment'; // 追加
+import { AngularFireModule } from '@angular/fire'; // 追加
+import { AngularFirestoreModule } from '@angular/fire/firestore'; // 追加
+import { AngularFireAuthModule } from '@angular/fire/auth'; // 追加
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SakeListComponent } from './sake-list/sake-list.component';
@@ -21,6 +26,9 @@ import { SakeService} from './sake.service'
   imports: [
     BrowserModule,
     AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
+    AngularFireAuthModule,
     AccordionModule.forRoot()
   ],
   providers: [SakeService],

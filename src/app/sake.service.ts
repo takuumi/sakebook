@@ -1,18 +1,26 @@
 import { Injectable } from '@angular/core';
 import {Sake} from './sake/sake';
 import {SAKEDATA} from './sake/sakedata';
-
+import { AngularFirestore } from '@angular/fire/firestore'; // 追加
+import { Observable } from 'rxjs'; // 追加
 
 @Injectable({
   providedIn: 'root'
 })
 export class SakeService {
 
+
   sakedata:Sake[] = SAKEDATA;
+  item: Observable<Comment>; // 追加
 
   currentValue:string = '';
-  constructor() { }
-
+//  constructor(){}
+  constructor(db: AngularFirestore) {
+    this.item = db
+      .collection('sakebook')
+      .doc<Comment>('item')
+      .valueChanges();
+  }
   getSakedata():Sake[]{
     return this.sakedata;
   }
