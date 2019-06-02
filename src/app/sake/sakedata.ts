@@ -1,5 +1,5 @@
-import { Sake } from "./sake";
-export const SAKEDATA: Sake[] = [   
+import { Saketemp } from "./sake";
+export const SAKEDATA: Saketemp[] = [   
     {
         id:1,
         name: "伯楽星 生酒 おりがらみ",

@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {AccordionModule} from 'ngx-bootstrap';
 
-// カスタムパイプ
 import { OrderByPipe } from './utilities/order-by-pipe';
 
 import { environment } from '../environments/environment'; // 追加

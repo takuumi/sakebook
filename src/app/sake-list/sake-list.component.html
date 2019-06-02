@@ -29,6 +29,29 @@
       飲み終わり日
     </th>
   </tr>
+
+  <tr *ngFor="let item of tests | async">
+    <td>
+          {{item.id}}
+    </td>    
+    <td>
+        <a routerLink = "/sake-data/{{item.id}}">{{item.name}}</a>
+    </td>
+    <td>
+      {{item.rank}}
+    </td>
+    <td>
+      {{item.prefecture}}
+    </td>
+    <td>
+        {{item.drink_start_date}}
+    </td>
+    <td>
+      {{item.drink_end_date}}
+    </td>
+  </tr>
+
+<!--
   <tr *ngFor= "let sake of sakedata | orderBy:'id'">
     <td>
           {{sake.id}}
@@ -49,6 +72,8 @@
       {{sake.drink_end_date}}
    </td>
   </tr>
+
+-->
 </table>
   
 
