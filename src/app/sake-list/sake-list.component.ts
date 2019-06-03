@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Sake} from '../sake/sake'
 import {SakeService} from '../sake.service'
-import { Observable } from 'rxjs';
-
 
 @Component({
   selector: 'app-sake-list',
@@ -11,13 +9,15 @@ import { Observable } from 'rxjs';
 })
 export class SakeListComponent implements OnInit {
   sakedata : Sake[];
-  tests : Observable<Sake[]>; 
 
   constructor(private rsv: SakeService) { }
 
   ngOnInit() {
-    this.sakedata = this.rsv.getSakedata();
-    this.tests = this.rsv.getTestData();
+    this.rsv.InitializeService().subscribe(item => {
+      this.sakedata = item;
+      //@@@ 取得してセット・・・変だけど一旦これで。。。
+      this.rsv.setSakedata(this.sakedata);
+    })
   }
 
   searchSake(keyword:string) {

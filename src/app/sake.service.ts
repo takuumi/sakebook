@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
-import {Saketemp} from './sake/sake';
 
 import {Sake} from './sake/sake';
-import {SAKEDATA} from './sake/sakedata';
 import {
   AngularFirestore,
   AngularFirestoreCollection,
@@ -35,62 +33,52 @@ export class SakeService {
 
     /** 取得したコレクションを格納 */
     private itemsCollection: AngularFirestoreCollection<Sake>;
-    tests: Observable<Sake[]>;
     
     sakedata: Sake[];
 
-  //sakedata:Sake[] = SAKEDATA;
+    currentValue:string = '';
+    constructor(db: AngularFirestore) {
+        this.itemsCollection = db.collection<Sake>('sakebook');
+    }
 
-  currentValue:string = '';
-//  constructor(){}
-  constructor(db: AngularFirestore) {
-    this.itemsCollection = db.collection<Sake>('sakebook');
-    this.tests = this.itemsCollection.valueChanges();
+    InitializeService():Observable<Sake[]>{
+        return this.itemsCollection.valueChanges();
+    }
 
-    let storeTask = this.itemsCollection.valueChanges().subscribe((sakebook) => {
-      trace("in subscribe start")
+    getSakedata():Sake[]{
+        return this.sakedata;
+    }
+    // @@@mada
+    setSakedata(tmp:Sake[]){
+        this.sakedata = tmp;
+    }
 
-      this.sakedata = sakebook;
-      trace("in subscribe end")
-    });
-    trace("const end")
+    getSake(id:string):Sake{
+        return this.sakedata.find(sake=>sake.id.toString()==id);
+    }
 
-  }
-  getSakedata():Sake[]{
-    return this.sakedata;
-  }
+    searchSake(keyword: string): Sake[] {
+        let resultArr : Sake[] = [];
 
-  getTestData(): Observable<Sake[]> {
-    return this.tests;
-  }
-
-  setSakedata(){
-    SakeDataLists.forEach(element => {
-      this.itemsCollection.add(element);      
-    });
-  }
-
-
-  getSake(id:string):Sake{
-    return this.sakedata.find(sake=>sake.id.toString()==id);
-  }
-
-  searchSake(keyword: string): Sake[] {
-    let resultArr : Sake[];
-
-//    for (let sake of this.sakedata) {
-//      let sakeStr = JSON.stringify(sake);
-//      if (sakeStr.search(keyword) >=0) {
-//        resultArr.push(sake);
-//      }
-//    }
-    return this.sakedata;
-    return resultArr;
-  }
-
-
+        for (let sake of this.sakedata) {
+            let sakeStr = JSON.stringify(sake);
+            if (sakeStr.search(keyword) >=0) {
+                trace("1");
+                resultArr.push(sake);
+                trace("2")
+            }
+        }
+        return resultArr;
+    }
 }
 
+
+/*
+    setSakedata(){
+        SakeDataLists.forEach(element => {
+            this.itemsCollection.add(element);      
+        });
+    }
 
 const SakeDataLists: Sake[] = [   
   {
@@ -840,4 +828,5 @@ const SakeDataLists: Sake[] = [
 
 ]
 
+    */
 
