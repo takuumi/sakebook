@@ -1,0 +1,10 @@
+<input type="file" (change)="uploadFile($event)" />
+<div>{{ uploadPercent | async }}</div>
+<a [href]="downloadURL | async">{{ downloadURL | async }}</a>
+
+
+download
+<img [src]="profileUrl | async">
+
+
+<button (click)="backToList()" class="btn btn-primary btn-sm">リストに戻る</button>
