@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {AccordionModule} from 'ngx-bootstrap';
+import {FormGroup, FormControl, ReactiveFormsModule} from '@angular/forms'
+
 
 import { OrderByPipe } from './utilities/order-by-pipe';
 
@@ -33,6 +35,7 @@ import { UpdateSakeDataComponent } from './update-sake-data/update-sake-data.com
     AngularFirestoreModule,
     AngularFireStorageModule,
     AngularFireAuthModule,
+    ReactiveFormsModule,
     AccordionModule.forRoot()
   ],
   providers: [

@@ -70,7 +70,12 @@ export class SakeService {
         }
         return resultArr;
     }
+
+    registerSakeDatabase(formdata:Sake) {
+        this.itemsCollection.add(formdata);
+    }
 }
+
 
 
 /*

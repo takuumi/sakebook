@@ -1,3 +1,43 @@
+<h2>登録するお酒データ</h2>
+
+
+<form [formGroup] = "sakeForm" novalidate>
+  <div>
+        <label>ID：<input type="number" formControlName="id"> </label>
+    </div>
+  <div>
+      <label>名前：<input formControlName="name"> </label>
+  </div>
+  <div>
+      <label>種類：<input formControlName="type"> </label>
+  </div>
+  <div>
+      <label>オススメ度：<input type="number" formControlName="rank"> </label>
+  </div>
+  <div>
+      <label>飲み始め日：<input type="date" formControlName="drink_start_date"> </label>
+  </div>
+  <div>
+      <label>飲み終わり日：<input type="date" formControlName="drink_end_date"> </label>
+  </div>
+  <div>
+      <label>県：<input formControlName="prefecture"> </label>
+  </div>
+  <div>
+      <label>量：<input type="number" formControlName="amount"> </label>
+  </div>
+  <div>
+      <label>アルコール度：<input type="number" formControlName="alcohol"> </label>
+  </div>
+  <div>
+      <label>備考：<input formControlName="bikou"> </label>
+  </div>
+
+  <p> フォーム入力値：{{sakeForm.value | json}}</p>
+
+</form>
+
+
 <input type="file" (change)="uploadFile($event)" />
 <div>{{ uploadPercent | async }}</div>
 <a [href]="downloadURL | async">{{ downloadURL | async }}</a>
@@ -7,4 +47,7 @@ download
 <img [src]="profileUrl | async">
 
 
+<button (click)="register()" class="btn btn-primary btn-sm">登録</button>
+
 <button (click)="backToList()" class="btn btn-primary btn-sm">リストに戻る</button>
+
