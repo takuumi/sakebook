@@ -63,9 +63,7 @@ export class SakeService {
         for (let sake of this.sakedata) {
             let sakeStr = JSON.stringify(sake);
             if (sakeStr.search(keyword) >=0) {
-                trace("1");
                 resultArr.push(sake);
-                trace("2")
             }
         }
         return resultArr;

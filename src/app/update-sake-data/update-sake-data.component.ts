@@ -1,13 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireStorage } from 'angularfire2/storage';
-import { finalize } from 'rxjs/operators';
-import { Observable } from 'rxjs';
-import { ActivatedRoute } from '@angular/router';
 import {Location} from '@angular/common';
-import {FormControl, FormGroup, FormBuilder} from '@angular/forms'
+import {FormGroup, FormBuilder} from '@angular/forms'
 import {Sake} from '../sake/sake';
-import { SakeDataComponent } from '../sake-data/sake-data.component';
-import { fromNumber } from 'long';
+import {SakeService} from '../sake.service'
+
 
 @Component({
   selector: 'app-update-sake-data',
@@ -19,8 +16,8 @@ export class UpdateSakeDataComponent implements OnInit {
   ngOnInit() {
   }
   sakeForm:FormGroup;
-  constructor(private route:ActivatedRoute, private location:Location, 
-              private storage: AngularFireStorage, private fb:FormBuilder) {
+  constructor(private location:Location, 
+              private storage: AngularFireStorage, private fb:FormBuilder, private rsv: SakeService) {
                 this.sakeForm = this.fb.group({
                   id:1,
                   name: "",
@@ -36,41 +33,31 @@ export class UpdateSakeDataComponent implements OnInit {
 
               }
 
-  uploadPercent: Observable<number>;
-  downloadURL: Observable<string>;
-  selectedfile: string;
-  // @@@ detailに移動
-  //profileUrl: Observable<string | null>;
+  selectedfile: any;
   selectFile(event) {
-    this.selectedfile = event.target.files[0];
-
-   // @@@ detailに移動
-   // const ref = this.storage.ref('sakebook_pics/main.png');
-   // this.profileUrl = ref.getDownloadURL();
+    this.selectFile = event.target.files[0]
   }
 
   backToList() {
     this.location.back();
   }
 
-  register(event: Event) {
-    //@@@入力チェック
-    debugger;
+  register() {
     var sakeData = this.convertToSake();
-
-    //@@@ファイルパスIDから
-    const filePath = 'sakebook_pics/pict.jpeg';
+    this.rsv.registerSakeDatabase(sakeData);
+    
+    var filePath = 'sakebook_pics/' + 'pict' + sakeData.id.toString() + '.jpeg'
     const fileRef = this.storage.ref(filePath);
-    const task = this.storage.upload(filePath, this.selectFile);
+    fileRef.put(this.selectFile).then(function() {
+      alert('アップロードしました');
+    });
 
-    // observe percentage changes
-    this.uploadPercent = task.percentageChanges();
-    // get notified when the download URL is available
-    task.snapshotChanges().pipe(
-        finalize(() => this.downloadURL = fileRef.getDownloadURL() )
-     )
-    .subscribe()
   }
+
+  toDate(str):Date {
+    var arr = str.split('-')
+    return new Date(arr[0], arr[1] - 1, arr[2]);
+  };
 
   convertToSake():Sake {
 
@@ -79,8 +66,8 @@ export class UpdateSakeDataComponent implements OnInit {
                        name:this.sakeForm.value.name,
                        type:this.sakeForm.value.type,
                        rank:this.sakeForm.value.rank,
-                       drink_start_date:this.sakeForm.value.drink_start_date,
-                       drink_end_date:this.sakeForm.value.drink_start_date,
+                       drink_start_date:this.toDate(this.sakeForm.value.drink_start_date),
+                       drink_end_date:this.toDate(this.sakeForm.value.drink_start_date),
                        prefecture:this.sakeForm.value.prefecture,
                        amount:this.sakeForm.value.amount,
                        alcohol:this.sakeForm.value.alcohol,
