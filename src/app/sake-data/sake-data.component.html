@@ -18,7 +18,8 @@
      </td> 
     </tr>
 </table>
-<img src="/assets/img/pict{{sake.id}}.jpeg" width="200" class="img-rounded-10px">
+<img [src]="profileUrl | async" width="200" class="img-rounded-10px">
+
 
 </div>
 <button (click)="backToList()" class="btn btn-primary btn-sm">リストに戻る</button>
