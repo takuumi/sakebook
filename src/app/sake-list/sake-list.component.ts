@@ -16,7 +16,7 @@ export class SakeListComponent implements OnInit {
   ngOnInit() {
     this.rsv.InitializeService().subscribe(item => {
       this.sakedata = item;
-      //@@@ 取得してセット・・・変だけど一旦これで。。。
+      // @@@ 取得してセット・・・変だけど一旦これで。。。
       this.rsv.setSakedata(this.sakedata);
     })
   }

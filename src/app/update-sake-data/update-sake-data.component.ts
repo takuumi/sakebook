@@ -67,7 +67,7 @@ export class UpdateSakeDataComponent implements OnInit {
                        type:this.sakeForm.value.type,
                        rank:this.sakeForm.value.rank,
                        drink_start_date:this.toDate(this.sakeForm.value.drink_start_date),
-                       drink_end_date:this.toDate(this.sakeForm.value.drink_start_date),
+                       drink_end_date:this.toDate(this.sakeForm.value.drink_end_date),
                        prefecture:this.sakeForm.value.prefecture,
                        amount:this.sakeForm.value.amount,
                        alcohol:this.sakeForm.value.alcohol,
