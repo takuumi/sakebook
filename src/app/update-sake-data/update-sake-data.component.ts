@@ -5,7 +5,6 @@ import {FormGroup, FormBuilder} from '@angular/forms'
 import {Sake} from '../sake/sake';
 import {SakeService} from '../sake.service'
 
-
 @Component({
   selector: 'app-update-sake-data',
   templateUrl: './update-sake-data.component.html',
