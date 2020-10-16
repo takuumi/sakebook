@@ -1,0 +1,7 @@
+
+・sakebookフォルダにて
+　ng build --prod --output-path=./gae/dist
+・gaeフォルダにて
+　 cd gae/
+   gcloud app deploy app.yaml --project disco-glow-209813 -v r029
+
